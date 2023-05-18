@@ -7,5 +7,9 @@ export default StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 20,
         paddingBottom: 40,
+    },
+    Car: {
+        width: '50%',
+        aspectRatio: 73 / 64,
     }
 });

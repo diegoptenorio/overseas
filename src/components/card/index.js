@@ -6,7 +6,7 @@ export const Card = ({ car }) => {
     const navigation = useNavigation();
     const goTo = (component, props) => navigation.navigate(component, props);
     return (
-        <TouchableOpacity onPress={() => goTo('Detail', {})}>
+        <TouchableOpacity onPress={() => goTo('Detail', { car })}>
             <View style={style.Card}>
                 <Image
                     style={style.Car}
