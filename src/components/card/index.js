@@ -1,5 +1,6 @@
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
+import { getCarImageByModel } from '../../utils';
 import style from './style';
 
 export const Card = ({ car }) => {
@@ -10,13 +11,13 @@ export const Card = ({ car }) => {
             <View style={style.Card}>
                 <Image
                     style={style.Car}
-                    source={car.image}
+                    source={getCarImageByModel(car?.modelo)}
                 />
                 <View style={style.Info}>
-                    <Text style={style.h1}>{car.name}</Text>
-                    <Text style={style.h2}>{car.manufactor}</Text>
-                    <Text style={style.p}>{car.city}</Text>
-                    <Text style={style.p}>R$ {car.price}/h</Text>
+                    <Text style={style.h1}>{car?.modelo}</Text>
+                    <Text style={style.h2}>{car?.marca}</Text>
+                    <Text style={style.p}>{car?.endereco}</Text>
+                    <Text style={style.p}>R$ {car?.valorHora}/h</Text>
                 </View>
             </View>
         </TouchableOpacity>

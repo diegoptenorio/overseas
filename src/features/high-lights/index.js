@@ -1,56 +1,44 @@
+import React, { useEffect } from 'react';
 import { Button, FlatList, Text, View } from 'react-native';
-import { ChevroletBoltEv, TeslaModelY, TeslaModelX } from '../../assets/img';
+import { useFetch } from '../../hooks/useFetch';
 import { Card } from '../../components';
 import style from './style';
 
-const data = [
+const highlights = [
     {
         title: 'Melhor avaliação',
-        car: {
-            name: 'Model X',
-            image: TeslaModelX,
-            manufactor: 'Tesla',
-            city: 'São Paulo',
-            price: 30,
-
-        }
     },
     {
         title: 'Destaque em potência',
-        car: {
-            name: 'Model Y',
-            image: TeslaModelY,
-            manufactor: 'Tesla',
-            city: 'São Paulo',
-            price: 30,
-
-        }
     },
     {
         title: 'Mais acessível',
-        car: {
-            name: 'Bolt EV',
-            image: ChevroletBoltEv,
-            manufactor: 'Chevrolet',
-            city: 'São Paulo',
-            price: 25,
-
-        }
     },
 ];
 
-export const HighLights = () => (
-    <View>
-        <FlatList
-            data={data}
-            keyExtractor={data => data.title}
-            renderItem={({item: data}) => (
+export const HighLights = () => {
+    const { fetchCars, cars } = useFetch();
+    useEffect(() => {
+        fetchCars();
+    }, []);
+    return (
+        <>
+            {cars && (
                 <View>
-                    <Text style={style.h1}>{data.title}</Text>
-                    <Card car={data.car} />
+                    <Text>{JSON.stringify(cars)}</Text>
+                    <FlatList
+                        data={highlights}
+                        keyExtractor={highlights => highlights.title}
+                        renderItem={({ item: highlights }) => (
+                            <View>
+                                <Text style={style.h1}>{highlights.title}</Text>
+                                <Card car={cars[0]} />
+                            </View>
+                        )}
+                    />
+                    <Button title='Ver Todos' />
                 </View>
             )}
-        />
-        <Button title='Ver Todos' />
-    </View>
-);
+        </>
+    )
+};
