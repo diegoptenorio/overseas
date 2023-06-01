@@ -1,17 +1,14 @@
-import { ChevroletBoltEv, TeslaModelY, TeslaModelX } from '../assets/img';
+import { ChevroletBoltEv, NoPicture, TeslaModelY, TeslaModelX } from '../assets/img';
 
 export const getCarImageByModel = (model = '') => {
     switch (model) {
-        case 'TeslaX':
+        case 'Model X':
             return TeslaModelX;
-            break;
-        case 'TeslaY':
+        case 'Model Y':
             return TeslaModelY;
-            break;
-        case 'ChevroletBoltEv':
+        case 'Bolt EV':
             return ChevroletBoltEv;
-            break;
         default:
-            break;
+            return NoPicture;
     }
 };

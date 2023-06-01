@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Button, FlatList, Text, View } from 'react-native';
 import { useFetch } from '../../hooks/useFetch';
-import { Card } from '../../components';
+import { Card, Loading } from '../../components';
 import style from './style';
 
 const highlights = [
@@ -17,28 +17,28 @@ const highlights = [
 ];
 
 export const HighLights = () => {
-    const { fetchCars, cars } = useFetch();
+    const { fetchCars, cars, isLoading } = useFetch();
     useEffect(() => {
         fetchCars();
     }, []);
     return (
         <>
-            {cars && (
+            {isLoading && <Loading />}
+            {cars &&
                 <View>
-                    <Text>{JSON.stringify(cars)}</Text>
                     <FlatList
                         data={highlights}
                         keyExtractor={highlights => highlights.title}
-                        renderItem={({ item: highlights }) => (
+                        renderItem={({ item: highlights, index }) => (
                             <View>
                                 <Text style={style.h1}>{highlights.title}</Text>
-                                <Card car={cars[0]} />
+                                <Card car={cars[index]} />
                             </View>
                         )}
                     />
                     <Button title='Ver Todos' />
                 </View>
-            )}
+            }
         </>
     )
 };

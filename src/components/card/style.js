@@ -21,13 +21,13 @@ export default StyleSheet.create({
     h1: {
         color: '#000',
         fontWeight: 'bold',
-        fontSize: 19,
+        fontSize: 18,
         marginBottom: 5,
     },
     h2: {
         color: '#3B7EFF',
         fontWeight: 'normal',
-        fontSize: 19,
+        fontSize: 18,
         marginBottom: 12,
     },
     p: {

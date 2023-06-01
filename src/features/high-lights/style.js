@@ -4,7 +4,7 @@ export default StyleSheet.create({
     h1: {
         color: '#000',
         fontWeight: 'bold',
-        fontSize: 23,
+        fontSize: 22,
         marginBottom: 18,
     }
 });
