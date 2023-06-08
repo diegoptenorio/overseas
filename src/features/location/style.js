@@ -5,7 +5,7 @@ export default StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'top',
+        alignItems: 'flex-start',
         marginBottom: 30,
     },
     Title: {
@@ -16,10 +16,10 @@ export default StyleSheet.create({
     Address: {
         color: '#000',
         fontWeight: 'bold',
-        fontSize: 22
+        fontSize: 22,
     },
     IconUser: {
         height: 50,
-        width: 50
-    }
+        width: 50,
+    },
 });

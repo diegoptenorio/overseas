@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     Container: {
-        height: 76,
         backgroundColor: '#fff',
+        height: 76,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -11,7 +11,7 @@ export default StyleSheet.create({
     },
     goBackButton: {
         backgroundColor: '#fff',
-        borderRadius: '50%',
+        borderRadius: 40,
         height: 40,
         width: 40,
         paddingVertical: 10,

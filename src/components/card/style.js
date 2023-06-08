@@ -16,7 +16,7 @@ export default StyleSheet.create({
         borderTopRightRadius: 5,
         borderBottomRightRadius: 5,
         paddingVertical: 15,
-        paddingHorizontal: 15,     
+        paddingHorizontal: 15,
     },
     h1: {
         color: '#000',
@@ -35,5 +35,5 @@ export default StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 15,
         marginBottom: 8,
-    }
+    },
 });

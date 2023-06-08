@@ -6,11 +6,16 @@ export default StyleSheet.create({
         backgroundColor: '#D4DEEE',
         paddingHorizontal: 20,
         paddingTop: 20,
-        paddingBottom: 40,
+        paddingBottom: 20,
     },
     Car: {
-        width: '100%',
-        aspectRatio: 73 / 64,
+        height: 200,
+        flex: 1,
+        width: null,
+    },
+    SpecificationList: {
+        flex: 1,
+        marginBottom: 20,
     },
     Info: {
         display: 'flex',
@@ -23,9 +28,12 @@ export default StyleSheet.create({
     },
     Title: {
         fontWeight: 'bold',
-        color: '#445684'
+        color: '#445684',
     },
     Value: {
-        color: '#445684'
-    }
+        color: '#445684',
+    },
+    nextButton: {
+        marginTop: 20,
+    },
 });
