@@ -41,6 +41,13 @@ npm install
 # Acesso
 
 - <a href="https://www.figma.com/proto/LtNY8JbNl5OQzKc8FqUCdB/Startup-One?type=design&node-id=1-158&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A158" target="_blank">Protótipo funcional</a>
+- <a href="https://overseas-7xnx.onrender.com/" target="_blank">Swagger</a>
+
+O swagger pode demorar até 3 minutos no primeiro acesso e será necessário de credencial
+
+Credencial de acesso ao Swagger:
+- Usuário: root@root.com
+- Senha: rootroot
 
 # Build
 
