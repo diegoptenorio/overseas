@@ -85,13 +85,13 @@ export default StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 22,
+        backgroundColor: 'rgba(0,0,0,0.6)',
     },
     modalView: {
         margin: 20,
         backgroundColor: 'white',
         borderRadius: 5,
-        paddingVertical: 20,
+        padding: 20,
         alignItems: 'center',
         shadowColor: '#000',
         shadowOffset: {

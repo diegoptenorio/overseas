@@ -85,7 +85,6 @@ export const Payment = () => {
                 <Button
                     title="Finalizar"
                     onPress={() => setModalVisible(true)}
-                    disabled={modalVisible}
                 />
             </View>
         </>
