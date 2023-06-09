@@ -9,11 +9,53 @@ export default StyleSheet.create({
         paddingBottom: 20,
     },
     creditCard: {
+        aspectRatio: 5 / 3,
         width: '100%',
-        aspectRatio: 164 / 283,
+        backgroundColor: '#000',
+        borderRadius: 10,
+        justifyContent: 'space-between',
+        padding: 20,
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    },
+    creditCardLogo: {
+        height: 21,
+        width: 37,
+    },
+    creditCardNumber: {
+        color: '#fff',
+        textAlign: 'center',
+        fontSize: 18,
+    },
+    creditCardFooter: {
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        fontSize: 14,
+    },
+    expirtationLabel: {
+        color: '#757575',
+        fontWeight: 'bold',
+    },
+    expirationDate: {
+        color: '#fff',
+    },
+    cvvLabel: {
+        color: '#757575',
+        fontWeight: 'bold',
+    },
+    cvvNumber: {
+        color: '#fff',
+        textAlign: 'right',
     },
     linkButton: {
         justifyContent: 'flex-end',
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginTop: 20,
+        marginBottom: 40,
+    },
+    linkButtonIcon: {
+        height: 12,
+        width: 12,
     },
     linkButtonText: {
         marginLeft: 10,
@@ -49,7 +91,7 @@ export default StyleSheet.create({
         margin: 20,
         backgroundColor: 'white',
         borderRadius: 5,
-        paddingTop: 20,
+        paddingVertical: 20,
         alignItems: 'center',
         shadowColor: '#000',
         shadowOffset: {
@@ -63,7 +105,7 @@ export default StyleSheet.create({
     button: {
         width: '100%',
         borderRadius: 5,
-        paddingHorizontal: 20,
+        paddingHorizontal: 40,
         paddingVertical: 10,
         elevation: 2,
     },

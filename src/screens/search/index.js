@@ -1,22 +1,31 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { FlatList, Text, View } from 'react-native';
 
-import { SearchBar } from '../../features';
+import { Header, SearchBar } from '../../features';
+import { Card } from '../../components';
+import { mockCars } from '../../server/cars';
 import style from './style';
 
-export const Search = () => (
-    <View style={style.container}>
-        <SearchBar />
-        <Text style={style.h1}>Resultado da busca</Text>
-        {/* <View style={style.containerList}>
-            <View>
-                <FlatList
-                    data={highlights}
-                    keyExtractor={(highlights) => highlights.title}
-                    renderItem={({ item: highlights, index }) => <Card car={cars[index]} />}
-                    style={style.list}
-                />
+export const Search = () => {
+    const [value, onChangeValue] = useState('');
+    const cars = mockCars.filter((car) => car.modelo.toUpperCase().includes(value.toUpperCase()));
+    return (
+        <>
+            <Header title="Buscar Carro" />
+            <View style={style.container}>
+                <SearchBar value={value} onChangeValue={onChangeValue} />
+                <Text style={style.h1}>Resultado da busca</Text>
+                <View style={style.containerList}>
+                    <View>
+                        <FlatList
+                            data={cars}
+                            keyExtractor={(cars) => cars.id}
+                            renderItem={({ item: cars }) => <Card car={cars} />}
+                            style={style.list}
+                        />
+                    </View>
+                </View>
             </View>
-        </View> */}
-    </View>
-);
+        </>
+    );
+};

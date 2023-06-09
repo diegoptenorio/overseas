@@ -10,7 +10,7 @@ export default StyleSheet.create({
     },
     containerList: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
     },
     h1: {
         color: '#000',

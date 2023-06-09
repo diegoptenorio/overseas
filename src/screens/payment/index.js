@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { Header } from '../../features';
-import { Add, CreditCard } from '../../assets/img';
+import { Add, MasterCard } from '../../assets/img';
 import style from './style';
 
 export const Payment = () => {
@@ -35,16 +35,37 @@ export const Payment = () => {
             </Modal>
             <Header title="Pagamento" />
             <View style={style.Container}>
-                <Image
-                    style={style.creditCard}
-                    source={CreditCard}
-                />
+                <View style={style.creditCard}>
+                    <Image
+                        style={style.creditCardLogo}
+                        source={MasterCard}
+                    />
+                    <Text style={style.creditCardNumber}>****  ****  ****  1658</Text>
+                    <View style={style.creditCardFooter}>
+                        <View>
+                            <Text style={style.expirtationLabel}>
+                                VALIDADE
+                            </Text>
+                            <Text style={style.expirationDate}>
+                                07/28
+                            </Text>
+                        </View>
+                        <View>
+                            <Text style={style.cvvLabel}>
+                                CVV
+                            </Text>
+                            <Text style={style.cvvNumber}>
+                                ***
+                            </Text>
+                        </View>
+                    </View>
+                </View>
                 <View>
                     <Pressable
                         style={style.linkButton}
                         onPress={() => console.log('add card')}
                     >
-                        <Image source={Add} />
+                        <Image style={style.linkButtonIcon} source={Add} />
                         <Text style={style.linkButtonText}>Adicionar cartão de crédito</Text>
                     </Pressable>
                 </View>

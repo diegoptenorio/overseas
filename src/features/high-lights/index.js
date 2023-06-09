@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Button, FlatList, Text, View,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 import useFetch from '../../hooks/useFetch';
 import { Card, Loading } from '../../components';
 import style from './style';
@@ -20,6 +21,7 @@ const highlights = [
 
 export const HighLights = () => {
     const { cars, isLoading } = useFetch();
+    const navigation = useNavigation();
     return (
         <View style={style.container}>
             {isLoading && <Loading />}
@@ -37,7 +39,7 @@ export const HighLights = () => {
                             )}
                             style={style.list}
                         />
-                        <Button title="Ver Todos" />
+                        <Button onPress={() => navigation.navigate('Search')} title="Ver Todos" />
                     </View>
                 )}
         </View>

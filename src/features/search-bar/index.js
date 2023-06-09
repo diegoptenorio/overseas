@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Image, Pressable, TextInput, View,
 } from 'react-native';
@@ -8,9 +8,11 @@ import { IconFilter, IconSearch } from '../../assets/img';
 
 import style from './style';
 
-export const SearchBar = () => {
-    const [value, onChangeValue] = useState('');
+export const SearchBar = ({ value, onChangeValue }) => {
     const navigation = useNavigation();
+    const filter = () => {
+        navigation.navigate('Search');
+    };
     return (
         <View style={style.filterBar}>
             <View style={style.filterContainer}>
@@ -25,7 +27,7 @@ export const SearchBar = () => {
                     placeholder="Procurar carro"
                 />
             </View>
-            <Pressable style={style.filterButton} onPress={() => navigation.navigate('Search')}>
+            <Pressable style={style.filterButton} onPress={() => filter()}>
                 <Image
                     style={style.iconFilter}
                     source={IconFilter}
