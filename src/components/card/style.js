@@ -16,18 +16,18 @@ export default StyleSheet.create({
         borderTopRightRadius: 5,
         borderBottomRightRadius: 5,
         paddingVertical: 15,
-        paddingHorizontal: 15,     
+        paddingHorizontal: 15,
     },
     h1: {
         color: '#000',
         fontWeight: 'bold',
-        fontSize: 19,
+        fontSize: 18,
         marginBottom: 5,
     },
     h2: {
         color: '#3B7EFF',
         fontWeight: 'normal',
-        fontSize: 19,
+        fontSize: 18,
         marginBottom: 12,
     },
     p: {
@@ -35,5 +35,5 @@ export default StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 15,
         marginBottom: 8,
-    }
+    },
 });

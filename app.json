@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "overseas-app",
+    "name": "Overseas",
     "slug": "overseas-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#D4DEEE"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,11 +20,17 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#D4DEEE"
+      },
+      "package": "com.diegotenorio.overseasapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9ea680c2-ad8f-4de2-883d-9423785fefc3"
+      }
     }
   }
 }

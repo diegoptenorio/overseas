@@ -1,0 +1,50 @@
+export const mockCars = [
+    {
+        id: 2,
+        marca: "Tesla",
+        modelo: "Model Y",
+        placa: "XPT971B",
+        ano: "2022",
+        tipo: "eletrico",
+        foto: null,
+        valorHora: 30.0,
+        velocidade: 330.0,
+        autonomiaKm: 80.0,
+        cor: null,
+        dataCadastroCarro: "2023-05-31T17:02:07.036246",
+        endereco: null,
+        reserva: []
+    },
+    {
+        id: 3,
+        marca: "Chevrolet",
+        modelo: "Bolt EV",
+        placa: "PC7891B",
+        ano: "2022",
+        tipo: "eletrico",
+        foto: null,
+        valorHora: 25.0,
+        velocidade: 200.0,
+        autonomiaKm: 70.0,
+        cor: null,
+        dataCadastroCarro: "2023-05-31T17:03:35.669345",
+        endereco: null,
+        reserva: []
+    },
+    {
+        id: 1,
+        marca: "Tesla",
+        modelo: "Model X",
+        placa: "XPTO01A",
+        ano: "2020",
+        tipo: "eletrico",
+        foto: null,
+        valorHora: 30.0,
+        velocidade: 330.0,
+        autonomiaKm: 80.0,
+        cor: null,
+        dataCadastroCarro: "2023-05-31T17:04:55.635277",
+        endereco: null,
+        reserva: []
+    }
+]

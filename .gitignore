@@ -1,3 +1,4 @@
+src/constants/auth.js
 node_modules/
 .expo/
 dist/

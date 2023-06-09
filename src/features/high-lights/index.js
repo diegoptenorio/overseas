@@ -1,56 +1,47 @@
-import { Button, FlatList, Text, View } from 'react-native';
-import { ChevroletBoltEv, TeslaModelY, TeslaModelX } from '../../assets/img';
-import { Card } from '../../components';
+import React from 'react';
+import {
+    Button, FlatList, Text, View,
+} from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+import useFetch from '../../hooks/useFetch';
+import { Card, Loading } from '../../components';
 import style from './style';
 
-const data = [
+const highlights = [
     {
         title: 'Melhor avaliação',
-        car: {
-            name: 'Model X',
-            image: TeslaModelX,
-            manufactor: 'Tesla',
-            city: 'São Paulo',
-            price: 30,
-
-        }
     },
     {
         title: 'Destaque em potência',
-        car: {
-            name: 'Model Y',
-            image: TeslaModelY,
-            manufactor: 'Tesla',
-            city: 'São Paulo',
-            price: 30,
-
-        }
     },
     {
         title: 'Mais acessível',
-        car: {
-            name: 'Bolt EV',
-            image: ChevroletBoltEv,
-            manufactor: 'Chevrolet',
-            city: 'São Paulo',
-            price: 25,
-
-        }
     },
 ];
 
-export const HighLights = () => (
-    <View>
-        <FlatList
-            data={data}
-            keyExtractor={data => data.title}
-            renderItem={({item: data}) => (
-                <View>
-                    <Text style={style.h1}>{data.title}</Text>
-                    <Card car={data.car} />
-                </View>
-            )}
-        />
-        <Button title='Ver Todos' />
-    </View>
-);
+export const HighLights = () => {
+    const { cars, isLoading } = useFetch();
+    const navigation = useNavigation();
+    return (
+        <View style={style.container}>
+            {isLoading && <Loading />}
+            {cars
+                && (
+                    <View>
+                        <FlatList
+                            data={highlights}
+                            keyExtractor={(highlights) => highlights.title}
+                            renderItem={({ item: highlights, index }) => (
+                                <View>
+                                    <Text style={style.h1}>{highlights.title}</Text>
+                                    <Card car={cars[index]} />
+                                </View>
+                            )}
+                            style={style.list}
+                        />
+                        <Button onPress={() => navigation.navigate('Search')} title="Ver Todos" />
+                    </View>
+                )}
+        </View>
+    );
+};
