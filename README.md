@@ -16,13 +16,19 @@ Overseas é uma locadora C2C de veículos eletréticos. Esse projeto é o app h�
 Equipe Overseas composta por Carlos Henrique, Mayara Amorim e Diego Pereira
 
 # Passos
-1 - O primeiro passo é garantir o Node.js instalado na versão 18 ou superior
-2 - Clonar o projeto:
-$ git clone https://github.com/diegoptenorio/overseas.git
-3 - Entrar na pasta do projeto:
-$ cd overseas
-4 - Instalar as dependências:
-$ npm install
+1. O primeiro passo é garantir o Node.js instalado na versão 18 ou superior
+2. Clonar o projeto:
+```
+git clone https://github.com/diegoptenorio/overseas.git
+```
+3. Entrar na pasta do projeto:
+```
+cd overseas
+```
+4. Instalar as dependências:
+```
+npm install
+```
 
 # Funcionalidades
 
