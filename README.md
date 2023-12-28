@@ -13,7 +13,9 @@
 Overseas é uma locadora C2C de veículos eletréticos. Esse projeto é o app híbrido para web, android e IOS desenvolvido com Expo/React Native.
 
 # Equipe
-Equipe Overseas composta por Carlos Henrique, Mayara Amorim e Diego Pereira
+Equipe Overseas composta por:
+- Diego Pereira - UI/Frontend
+- Mayara Amorim - Backend
 
 # Passos
 1. O primeiro passo é garantir o Node.js instalado na versão 18 ou superior
