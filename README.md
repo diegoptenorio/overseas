@@ -45,10 +45,6 @@ npm install
 
 O swagger pode demorar até 3 minutos no primeiro acesso e será necessário de credencial
 
-Credencial de acesso ao Swagger:
-- Usuário: root@root.com
-- Senha: rootroot
-
 # Build
 
 Build do apk para Android
